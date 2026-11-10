@@ -1,0 +1,14 @@
+/* ส่วนท้ายหน้าเว็บ (แสดงเฉพาะข้อความ) */
+
+.site-footer {
+  background-color: transparent;
+  border-top: none;
+  padding: 24px 0 28px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.site-footer p {
+  margin: 0;
+}

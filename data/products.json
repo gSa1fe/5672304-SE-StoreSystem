@@ -1,0 +1,107 @@
+{
+  "banners": [
+    {
+      "id": 1,
+      "image": "assets/images/banners/banner1.svg",
+      "alt": "Banner 1"
+    },
+    {
+      "id": 2,
+      "image": "assets/images/banners/banner2.svg",
+      "alt": "Banner 2"
+    },
+    {
+      "id": 3,
+      "image": "assets/images/banners/banner3.svg",
+      "alt": "Banner 3"
+    }
+  ],
+  "bestSellers": [
+    {
+      "id": 1,
+      "name": "มาม่าบะหมี่กึ่งสำเร็จรูป",
+      "price": 72.00,
+      "image": "assets/images/products/best1.svg"
+    },
+    {
+      "id": 2,
+      "name": "ซีอิ๊ว ภูเขาทอง",
+      "price": 175.00,
+      "image": "assets/images/products/best2.svg"
+    },
+    {
+      "id": 3,
+      "name": "มาลี เงาะกระป๋อง",
+      "price": 76.00,
+      "image": "assets/images/products/best3.svg"
+    },
+    {
+      "id": 4,
+      "name": "ทิปโก้แคนเบอร์รี่",
+      "price": 135.00,
+      "image": "assets/images/products/best4.svg"
+    },
+    {
+      "id": 5,
+      "name": "องุ่น (A Ngoon) น้ำมันถั่วเหลือง",
+      "price": 41.00,
+      "image": "assets/images/products/best5.svg"
+    }
+  ],
+  "products": [
+    {
+      "id": 501,
+      "code": "รหัสสินค้า501",
+      "type": "บริโภค-สำเร็จรูป",
+      "name": "มาม่าบะหมี่",
+      "price": 12.00,
+      "stock": 100,
+      "image": "assets/images/products/prod501.svg"
+    },
+    {
+      "id": 502,
+      "code": "รหัสสินค้า502",
+      "type": "บริโภค-สำเร็จรูป",
+      "name": "ซีอิ๊ว ภูเขาทอง",
+      "price": 175.00,
+      "stock": 130,
+      "image": "assets/images/products/prod502.svg"
+    },
+    {
+      "id": 503,
+      "code": "รหัสสินค้า503",
+      "type": "บริโภค-สำเร็จรูป",
+      "name": "มาลี เงาะกระป๋อง",
+      "price": 76.00,
+      "stock": 100,
+      "image": "assets/images/products/prod503.svg"
+    },
+    {
+      "id": 504,
+      "code": "รหัสสินค้า504",
+      "type": "บริโภค-สำเร็จรูป",
+      "name": "ทิปโก้แคนเบอร์รี่",
+      "price": 135.00,
+      "stock": 100,
+      "image": "assets/images/products/prod504.svg"
+    },
+    {
+      "id": 505,
+      "code": "รหัสสินค้า505",
+      "type": "บริโภค-เครื่องปรุง",
+      "name": "องุ่น (A Ngoon) น้ำมันถั่วเหลือง",
+      "price": 41.00,
+      "stock": 100,
+      "image": "assets/images/products/prod505.svg"
+    },
+    {
+      "id": 506,
+      "code": "รหัสสินค้า506",
+      "type": "บริโภค-เครื่องปรุง",
+      "name": "เด็กสมบูรณ์ ซีอิ๊วดำ",
+      "price": 23.00,
+      "stock": 70,
+      "image": "assets/images/products/prod506.svg"
+    }
+  ]
+}

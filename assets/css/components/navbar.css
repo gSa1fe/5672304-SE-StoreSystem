@@ -1,0 +1,141 @@
+/* แถบเมนูด้านบน โลโก้ และเมนูนำทาง */
+
+/* ขนาดไอคอนพื้นฐาน */
+.ui-icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  vertical-align: -2px;
+  flex-shrink: 0;
+}
+
+.ui-icon-xs {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  vertical-align: -1px;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+/* แถบ Header หลัก */
+.site-header {
+  background-color: var(--bg-header);
+  border-bottom: 1px solid var(--border-default);
+  position: relative;
+  z-index: 50;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+}
+
+/* โลโก้และชื่อร้าน */
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.brand-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+}
+
+/* เมนูนำทางบนหน้าจอคอมพิวเตอร์ */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  padding: 4px 6px;
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: var(--accent-white);
+  font-weight: 600;
+}
+
+/* ปุ่มเมนูสำหรับหน้าจอมือถือ (ซ่อนบนหน้าจอคอมพิวเตอร์) */
+.hamburger-btn {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--border-default);
+  color: var(--text-primary);
+  padding: 5px 7px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.hamburger-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+}
+
+/* ปรับแต่งการแสดงผลเมนูบนจอมือถือ */
+@media screen and (max-width: 576px) {
+  .hamburger-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-header);
+    border-bottom: 1px solid var(--border-default);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 16px;
+    z-index: 100;
+  }
+
+  .nav-menu.is-open {
+    display: flex;
+  }
+
+  .nav-item {
+    width: 100%;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .nav-item:last-child {
+    border-bottom: none;
+  }
+}

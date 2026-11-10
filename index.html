@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SE - Store System</title>
+  <link rel="icon" type="image/png" href="assets/images/branding/logo.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- แถบเมนูด้านบน -->
+  <app-header active-page="home" base-path="."></app-header>
+
+  <main class="container main-content">
+
+    <!-- สไลด์รูปภาพประชาสัมพันธ์ -->
+    <section class="banner-section" aria-label="ป้ายประชาสัมพันธ์">
+      <div class="carousel-viewport">
+        <div id="carouselTrack" class="carousel-track"></div>
+
+        <button type="button" id="carouselPrev" class="carousel-arrow prev" aria-label="Previous Slide">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <button type="button" id="carouselNext" class="carousel-arrow next" aria-label="Next Slide">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+
+        <div id="carouselDots" class="carousel-dots"></div>
+      </div>
+    </section>
+
+    <!-- รายการสินค้าขายดี 5 รายการ -->
+    <section id="bestSellers" class="best-seller-section">
+      <div class="best-seller-header">
+        <h2 class="best-seller-title">
+          <svg class="ui-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+          </svg>
+          <span>สินค้าขายดี / สินค้าแนะนำ</span>
+        </h2>
+      </div>
+      <div id="bestSellerGrid" class="best-seller-grid"></div>
+    </section>
+
+    <!-- ช่องค้นหา ตัวกรอง และรายการสินค้าทั้งหมด 6 รายการ -->
+    <section id="allProducts" class="catalog-section">
+      <div class="search-filter-bar">
+        <div class="search-bar-left">
+          <div class="search-input-wrap">
+            <input type="text" id="searchInput" class="search-input" placeholder="ค้นหาสินค้า...">
+          </div>
+          <button type="button" id="btnSearch" class="btn-search">
+            <svg class="ui-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            </svg>
+            <span>Search</span>
+          </button>
+        </div>
+
+        <div class="filter-select-wrap">
+          <svg class="ui-icon filter-icon-left" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+          </svg>
+          <div class="select-box-wrap">
+            <select id="categoryFilter" class="category-select" aria-label="เลือกประเภทสินค้า"></select>
+            <svg class="ui-icon chevron-icon-right" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+
+  </main>
+
+  <!-- ส่วนท้ายหน้าเว็บ -->
+  <app-footer></app-footer>
+
+  <!-- สคริปต์การทำงาน -->
+  <script src="assets/js/core/config.js"></script>
+  <script src="assets/js/models/Product.js"></script>
+  <script src="assets/js/services/ProductService.js"></script>
+  <script src="assets/js/components/AppHeader.js"></script>
+  <script src="assets/js/components/AppFooter.js"></script>
+  <script src="assets/js/components/Slider.js"></script>
+  <script src="assets/js/components/SearchFilter.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

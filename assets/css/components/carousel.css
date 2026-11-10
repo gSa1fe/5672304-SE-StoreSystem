@@ -1,0 +1,88 @@
+/* สไลด์ภาพประชาสัมพันธ์ */
+
+.banner-section {
+  margin-bottom: 20px;
+}
+
+.carousel-viewport {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--bg-section);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.35s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1000 / 300;
+  object-fit: cover;
+  display: block;
+}
+
+/* ปุ่มเลื่อนซ้าย-ขวา */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background-color: rgba(10, 10, 10, 0.75);
+  border: 1px solid var(--border-default);
+  border-radius: 50%;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.carousel-arrow svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+}
+
+.carousel-arrow.prev {
+  left: 12px;
+}
+
+.carousel-arrow.next {
+  right: 12px;
+}
+
+/* จุดบอกตำแหน่งสไลด์ */
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 5;
+}
+
+.dot-btn {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #444444;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dot-btn.active {
+  background-color: var(--accent-white);
+}

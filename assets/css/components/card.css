@@ -1,0 +1,215 @@
+/* การ์ดสินค้าขายดี และการ์ดสินค้าทั้งหมด */
+
+/* ส่วนแสดงสินค้าขายดี (5 รายการ) */
+.best-seller-section {
+  background-color: var(--bg-section);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.best-seller-header {
+  background-color: #141414;
+  border-bottom: 1px solid var(--border-default);
+  padding: 8px 16px;
+  text-align: center;
+}
+
+.best-seller-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.best-seller-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+  padding: 16px;
+}
+
+.best-card {
+  min-width: 0;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.best-card-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  margin-bottom: 8px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background-color: #141414;
+}
+
+.best-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.best-card-name {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 8px;
+  min-width: 0;
+}
+
+.best-card-price {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  padding: 4px 10px;
+  background-color: #262626;
+  border: 1px solid #363636;
+  color: var(--text-primary);
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 12px;
+}
+
+/* ส่วนแสดงรายการสินค้าทั้งหมด (6 รายการ) */
+.catalog-section {
+  background-color: var(--bg-section);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.product-card {
+  min-width: 0;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.product-card-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #141414;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+}
+
+.product-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-card-info {
+  min-width: 0;
+  width: 100%;
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  overflow: hidden;
+}
+
+.product-code {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  color: var(--accent-white);
+  margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  width: 100%;
+}
+
+.product-detail-line {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+  min-width: 0;
+  width: 100%;
+}
+
+.product-detail-line .ui-icon-xs {
+  flex-shrink: 0;
+}
+
+.product-detail-line span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+  flex: 1;
+}
+
+.product-detail-line strong {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* ข้อความแจ้งเตือนเมื่อไม่พบสินค้า */
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 32px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* ปรับจำนวนคอลัมน์ตามขนาดหน้าจอ */
+@media screen and (max-width: 1080px) {
+  .best-seller-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .best-seller-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+}

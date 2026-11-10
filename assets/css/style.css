@@ -1,0 +1,12 @@
+/* สไตล์หลักของเว็บไซต์ */
+
+/* ตั้งค่าตัวแปรและโครงสร้างพื้นฐาน */
+@import url('./core/variables.css');
+@import url('./core/base.css');
+
+/* คอมโพเนนต์ต่างๆ ในหน้าเว็บ */
+@import url('./components/navbar.css');
+@import url('./components/carousel.css');
+@import url('./components/card.css');
+@import url('./components/form.css');
+@import url('./components/footer.css');
